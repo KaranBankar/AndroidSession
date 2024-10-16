@@ -13,6 +13,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 //This Comment is for GitHub
+
+//This is Secound Comment
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override  //Annotation
