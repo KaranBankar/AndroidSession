@@ -19,6 +19,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:inputType="text"
         android:layout_marginTop="20dp"
         android:hint="Enter Your Name"
         android:layout_margin="30dp"/>
@@ -26,6 +28,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:inputType="number"
         android:layout_margin="30dp"
         android:hint="Enter Password"/>
 
@@ -33,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOGIN"
+        android:id="@+id/btn_login"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:backgroundTint="#FF9800"/>
@@ -41,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New User? SignUp"
+        android:id="@+id/sign"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"/>
 </LinearLayout>
