@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-//New Commenty
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText e1_username,et2_password;
