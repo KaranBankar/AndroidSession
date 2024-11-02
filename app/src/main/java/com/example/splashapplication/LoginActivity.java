@@ -1,6 +1,7 @@
 package com.example.splashapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -33,6 +34,14 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
+        loadData();
+        if(loadData()==true){
+            Intent i=new Intent(this,HomeActivity.class);
+            startActivity(i);
+            finish();
+        }
+
+
         e1_username=findViewById(R.id.username);
         et2_password=findViewById(R.id.password);
         login_button=findViewById(R.id.btn_login);
@@ -55,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                     et2_password.setError("Password must be grater̥ than 5 Letters");
                 }
                 else{
+                    saveData();
                     Intent i=new Intent(LoginActivity.this,HomeActivity.class);
                     startActivity(i);
                     finish();
@@ -71,6 +81,20 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
+
+    public void saveData(){
+        SharedPreferences preferences=getSharedPreferences("sharedPref",MODE_PRIVATE);
+        SharedPreferences.Editor editor=preferences.edit();
+        editor.putBoolean("Flag",true);
+        editor.apply();
+    }
+
+    public boolean loadData(){
+        SharedPreferences preferences=getSharedPreferences("sharedPref",MODE_PRIVATE);
+        boolean myKey=preferences.getBoolean("Flag",false);
+        return myKey;
+    }
+
+
 }
